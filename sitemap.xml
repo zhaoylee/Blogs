@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/categories/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/posts/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/tags/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/categories/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/posts/blogs-01/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/about/</loc>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/archives/</loc>
+  </url><url>
+    <loc>http://localhost:10465/HNzhaoyli/My-Blogs/search/</loc>
+  </url>
+</urlset>
