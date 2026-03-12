@@ -5,19 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>My Fiveth Post | zhaoyli&#39;s Blog</title>
-<meta name="keywords" content="技术1：, 技术2：, 框架：">
+<title>MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models | zhaoyli&#39;s Blog</title>
+<meta name="keywords" content="车载、路边、无人机, 额外的模型, 多深度集成, 无监督">
 <meta name="description" content="
-📄 论文题目：填写论文全称
+
+📄 论文题目：MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models
 🏛️ 会议/期刊：CVPR / ICCV / ECCV
 📅 发表年份：2026
 💻 开源代码：GitHub 链接
 
+
 0. 一句话总结 (TL;DR)
-(这篇论文用什么方法，解决了什么问题，达到了什么效果)">
+(这篇论文用什么方法，解决了什么问题，达到了什么效果)
+MonoCT 提出了一种基于**一致性教师模型（Consistent Teacher）**的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。">
 <meta name="author" content="">
 <link rel="canonical" href="https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/">
-<link crossorigin="anonymous" href="/Blogs/assets/css/stylesheet.224c41bb202e1df31baff790cd0aa81f969751b57e119729ef5c608bb3ab647a.css" integrity="sha256-IkxBuyAuHfMbr/eQzQqoH5aXUbV&#43;EZcp71xgi7OrZHo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/Blogs/assets/css/stylesheet.ee7d0c12aa9f7e11232c69e4a4ea37239c44491b2daa2869f1ece208d307aaa7.css" integrity="sha256-7n0MEqqffhEjLGnkpOo3I5xESRstqihp8eziCNMHqqc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://zhaoylee.github.io/Blogs/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://zhaoylee.github.io/Blogs/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://zhaoylee.github.io/Blogs/favicon-32x32.png">
@@ -116,29 +119,30 @@ code.has-jax {
 }
 </style><meta property="og:url" content="https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/">
   <meta property="og:site_name" content="zhaoyli&#39;s Blog">
-  <meta property="og:title" content="My Fiveth Post">
-  <meta property="og:description" content="📄 论文题目：填写论文全称
+  <meta property="og:title" content="MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models">
+  <meta property="og:description" content="📄 论文题目：MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models
 🏛️ 会议/期刊：CVPR / ICCV / ECCV
 📅 发表年份：2026
 💻 开源代码：GitHub 链接
-0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果)">
+0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果) MonoCT 提出了一种基于**一致性教师模型（Consistent Teacher）**的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-03-12T10:25:13+08:00">
     <meta property="article:modified_time" content="2026-03-12T10:25:13+08:00">
-    <meta property="article:tag" content="技术1：">
-    <meta property="article:tag" content="技术2：">
-    <meta property="article:tag" content="框架：">
+    <meta property="article:tag" content="车载、路边、无人机">
+    <meta property="article:tag" content="额外的模型">
+    <meta property="article:tag" content="多深度集成">
+    <meta property="article:tag" content="无监督">
     <meta property="og:image" content="https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover.jpg">
-  <meta name="twitter:title" content="My Fiveth Post">
-  <meta name="twitter:description" content="📄 论文题目：填写论文全称
+  <meta name="twitter:title" content="MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models">
+  <meta name="twitter:description" content="📄 论文题目：MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models
 🏛️ 会议/期刊：CVPR / ICCV / ECCV
 📅 发表年份：2026
 💻 开源代码：GitHub 链接
-0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果)">
+0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果) MonoCT 提出了一种基于**一致性教师模型（Consistent Teacher）**的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。">
 
 
 <script type="application/ld+json">
@@ -155,7 +159,7 @@ code.has-jax {
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "My Fiveth Post",
+      "name": "MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models",
       "item": "https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/"
     }
   ]
@@ -165,14 +169,14 @@ code.has-jax {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "My Fiveth Post",
-  "name": "My Fiveth Post",
-  "description": " 📄 论文题目：填写论文全称\n🏛️ 会议/期刊：CVPR / ICCV / ECCV\n📅 发表年份：2026\n💻 开源代码：GitHub 链接\n0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果)\n",
+  "headline": "MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models",
+  "name": "MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models",
+  "description": " 📄 论文题目：MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models\n🏛️ 会议/期刊：CVPR / ICCV / ECCV\n📅 发表年份：2026\n💻 开源代码：GitHub 链接\n0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果) MonoCT 提出了一种基于**一致性教师模型（Consistent Teacher）**的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。\n",
   "keywords": [
-    "技术1：", "技术2：", "框架："
+    "车载、路边、无人机", "额外的模型", "多深度集成", "无监督"
   ],
-  "articleBody": " 📄 论文题目：填写论文全称\n🏛️ 会议/期刊：CVPR / ICCV / ECCV\n📅 发表年份：2026\n💻 开源代码：GitHub 链接\n0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果)\n1. 动机与问题 (Motivation) (现有的单目3D检测有什么痛点？)\n2. 核心方法 (Method) (具体怎么做的？比如额外辅助模型是怎么引入的？数据增强的具体流程是什么？)\n3. 实验与启发 (Experiments \u0026 Takeaways) (在 KITTI 上涨点了多少？对我自己的研究有什么可借鉴的？)\n修改了一下\n",
-  "wordCount" : "193",
+  "articleBody": " 📄 论文题目：MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models\n🏛️ 会议/期刊：CVPR / ICCV / ECCV\n📅 发表年份：2026\n💻 开源代码：GitHub 链接\n0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果) MonoCT 提出了一种基于**一致性教师模型（Consistent Teacher）**的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。\n1. 动机与问题 (Motivation) (现有的单目3D检测有什么痛点？)\n痛点：单目 3D 检测高度依赖相机的内参和场景布局。当模型从一个城市（源域）迁移到另一个城市（目标域）时，由于路面坡度、相机高度、物体尺寸分布的差异，会导致 3D 属性（尤其是深度）预估出现巨大偏差。\n局限：现有的 UDA（非监督领域自适应）方法多关注 2D 特征对齐，但在 3D 空间中，微小的像素偏移就会导致巨大的 3D 框漂移。\nMonoCT 整体框架图 2. 核心方法 (Method) (具体怎么做的？比如额外辅助模型是怎么引入的？数据增强的具体流程是什么？)\nMonoCT 的核心在于“教师-学生（Teacher-Student）”架构的升级版：\nConsistent Teacher (CT) 模块：\n为了防止教师模型产生错误的伪标签（Pseudo-labels），MonoCT 引入了一致性正则化。\n它要求模型在面对同一个物体的不同增强版本（如水平翻转、尺度缩放）时，输出的 3D 属性必须保持几何上的一致性。\n3D 几何约束头 (Geometry-aware Head)：\n模型利用 2D/3D 几何投影关系（Height-to-Depth）作为辅助，通过已知的相机内参反向校验深度预测的合理性。 自监督深度增强：\n在目标域（无标注数据）上，通过对比教师和学生模型预测的物体中心点偏移，来精细化调整物体在 BEV（鸟瞰图）下的位置。 3. 实验与启发 (Experiments \u0026 Takeaways) (在 KITTI 上涨点了多少？对我自己的研究有什么可借鉴的？)\n效果：在 KITTI → Waymo 的迁移实验中表现极其强悍。尤其是在跨相机参数的情况下，精度提升显著。\n启发：\n深度是关键：单目迁移的核心不是对齐特征图，而是校准深度。\n伪标签质量：在你的研究中（如 MonoMGS），如果也面临数据不足，可以借鉴这种“一致性教师”的思想，利用未标注数据生成的伪标签进行半监督预训练。\nBEV 投影：论文再次证明了在 BEV 空间进行约束比在图像平面约束更有效。\n结果对比 ",
+  "wordCount" : "919",
   "inLanguage": "zh",
   "image":"https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover.jpg","datePublished": "2026-03-12T10:25:13+08:00",
   "dateModified": "2026-03-12T10:25:13+08:00",
@@ -259,45 +263,119 @@ code.has-jax {
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      My Fiveth Post
+      MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models
     </h1>
-    <div class="post-meta"><div class="custom-post-meta" style="font-size: 0.9em; color: var(--secondary);"><span style='color: #e9546b; font-weight: bold;'>📌 置顶</span> &nbsp;|&nbsp; 📅 发表于 2026-03-12 &nbsp;|&nbsp; 📁 <a href="/Blogs/categories/%E5%A1%AB%E5%86%99%E6%B5%81%E6%B4%BE/">填写流派</a> &nbsp;|&nbsp; 🏷️ <a href="/Blogs/tags/%E6%8A%80%E6%9C%AF1/">技术1：</a>, <a href="/Blogs/tags/%E6%8A%80%E6%9C%AF2/">技术2：</a>, <a href="/Blogs/tags/%E6%A1%86%E6%9E%B6/">框架：</a></div>
+    <div class="post-meta"><div class="custom-post-meta" style="font-size: 0.9em; color: var(--secondary);"><span style='color: #e9546b; font-weight: bold;'>📌 置顶</span> &nbsp;|&nbsp; 📅 发表于 2026-03-12 &nbsp;|&nbsp; 📁 <a href="/Blogs/categories/%E5%A4%9A%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84mono3d/">多视角下的Mono3D</a> &nbsp;|&nbsp; 🏷️ <a href="/Blogs/tags/%E8%BD%A6%E8%BD%BD%E8%B7%AF%E8%BE%B9%E6%97%A0%E4%BA%BA%E6%9C%BA/">车载、路边、无人机</a>, <a href="/Blogs/tags/%E9%A2%9D%E5%A4%96%E7%9A%84%E6%A8%A1%E5%9E%8B/">额外的模型</a>, <a href="/Blogs/tags/%E5%A4%9A%E6%B7%B1%E5%BA%A6%E9%9B%86%E6%88%90/">多深度集成</a>, <a href="/Blogs/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/">无监督</a></div>
 
 </div>
   </header> 
 <figure class="entry-cover">
             <img loading="eager"
-                srcset='https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover_hu_bce6788b826be706.jpg 360w,https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover_hu_1c6c5cf324c33ae0.jpg 480w,https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover_hu_9f85491c1a5b6cdc.jpg 720w,https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover.jpg 978w'
+                srcset='https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover_hu_1d984b6ef62de110.jpg 360w,https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover_hu_d91211fc865d5717.jpg 480w,https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover.jpg 543w'
                 src="https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/cover.jpg"
                 sizes="(min-width: 768px) 720px, 100vw"
-                width="978" height="598"
+                width="543" height="543"
                 alt="">
         
 </figure>
-  <div class="post-content"><blockquote>
-<p><strong>📄 论文题目</strong>：填写论文全称<br>
+  <div class="post-content"><hr>
+<blockquote>
+<p><strong>📄 论文题目</strong>：MonoCT: Overcoming Monocular 3D Detection Domain Shift with  Consistent Teacher Models<br>
 <strong>🏛️ 会议/期刊</strong>：CVPR / ICCV / ECCV<br>
 <strong>📅 发表年份</strong>：2026<br>
 <strong>💻 开源代码</strong>：<a href="%E5%A1%AB%E5%86%99%E4%BD%A0%E7%9A%84URL">GitHub 链接</a></p>
 </blockquote>
+<hr>
 <h2 id="0-一句话总结-tldr">0. 一句话总结 (TL;DR)<a hidden class="anchor" aria-hidden="true" href="#0-一句话总结-tldr">#</a></h2>
-<p><em>(这篇论文用什么方法，解决了什么问题，达到了什么效果)</em></p>
+<p><em>(这篇论文用什么方法，解决了什么问题，达到了什么效果)</em>
+MonoCT 提出了一种基于**一致性教师模型（Consistent Teacher）**的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。</p>
+<hr>
 <h2 id="1-动机与问题-motivation">1. 动机与问题 (Motivation)<a hidden class="anchor" aria-hidden="true" href="#1-动机与问题-motivation">#</a></h2>
 <p><em>(现有的单目3D检测有什么痛点？)</em></p>
+<ul>
+<li>
+<p><strong>痛点</strong>：单目 3D 检测高度依赖相机的内参和场景布局。当模型从一个城市（源域）迁移到另一个城市（目标域）时，由于路面坡度、相机高度、物体尺寸分布的差异，会导致 3D 属性（尤其是深度）预估出现巨大偏差。</p>
+</li>
+<li>
+<p><strong>局限</strong>：现有的 UDA（非监督领域自适应）方法多关注 2D 特征对齐，但在 3D 空间中，微小的像素偏移就会导致巨大的 3D 框漂移。</p>
+</li>
+</ul>
+<hr>
+<figure class="align-center ">
+    <img loading="lazy" src="main_img.jpg#center"/> <figcaption>
+             MonoCT 整体框架图
+        </figcaption>
+</figure>
+
+<hr>
 <h2 id="2-核心方法-method">2. 核心方法 (Method)<a hidden class="anchor" aria-hidden="true" href="#2-核心方法-method">#</a></h2>
-<p><em>(具体怎么做的？比如额外辅助模型是怎么引入的？数据增强的具体流程是什么？)</em></p>
+<p><em>(具体怎么做的？比如额外辅助模型是怎么引入的？数据增强的具体流程是什么？)</em><br>
+MonoCT 的核心在于“教师-学生（Teacher-Student）”架构的升级版：</p>
+<ol>
+<li>
+<p>Consistent Teacher (CT) 模块：</p>
+<ul>
+<li>
+<p>为了防止教师模型产生错误的伪标签（Pseudo-labels），MonoCT 引入了一致性正则化。</p>
+</li>
+<li>
+<p>它要求模型在面对同一个物体的不同增强版本（如水平翻转、尺度缩放）时，输出的 3D 属性必须保持几何上的一致性。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>3D 几何约束头 (Geometry-aware Head)：</p>
+<ul>
+<li>模型利用 2D/3D 几何投影关系（Height-to-Depth）作为辅助，通过已知的相机内参反向校验深度预测的合理性。</li>
+</ul>
+</li>
+<li>
+<p>自监督深度增强：</p>
+<ul>
+<li>在目标域（无标注数据）上，通过对比教师和学生模型预测的物体中心点偏移，来精细化调整物体在 BEV（鸟瞰图）下的位置。</li>
+</ul>
+</li>
+</ol>
+<hr>
 <h2 id="3-实验与启发-experiments--takeaways">3. 实验与启发 (Experiments &amp; Takeaways)<a hidden class="anchor" aria-hidden="true" href="#3-实验与启发-experiments--takeaways">#</a></h2>
 <p><em>(在 KITTI 上涨点了多少？对我自己的研究有什么可借鉴的？)</em></p>
-<p>修改了一下</p>
+<ul>
+<li>
+<p><strong>效果</strong>：在 KITTI → Waymo 的迁移实验中表现极其强悍。尤其是在跨相机参数的情况下，精度提升显著。</p>
+</li>
+<li>
+<p><strong>启发</strong>：</p>
+<ul>
+<li>
+<p>深度是关键：单目迁移的核心不是对齐特征图，而是校准深度。</p>
+</li>
+<li>
+<p>伪标签质量：在你的研究中（如 MonoMGS），如果也面临数据不足，可以借鉴这种“一致性教师”的思想，利用未标注数据生成的伪标签进行半监督预训练。</p>
+</li>
+<li>
+<p>BEV 投影：论文再次证明了在 BEV 空间进行约束比在图像平面约束更有效。</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="align-center ">
+    <img loading="lazy" src="result.jpg#center"/> <figcaption>
+            结果对比
+        </figcaption>
+</figure>
+
+<hr>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E6%8A%80%E6%9C%AF1/">技术1：</a></li>
-      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E6%8A%80%E6%9C%AF2/">技术2：</a></li>
-      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E6%A1%86%E6%9E%B6/">框架：</a></li>
+      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E8%BD%A6%E8%BD%BD%E8%B7%AF%E8%BE%B9%E6%97%A0%E4%BA%BA%E6%9C%BA/">车载、路边、无人机</a></li>
+      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E9%A2%9D%E5%A4%96%E7%9A%84%E6%A8%A1%E5%9E%8B/">额外的模型</a></li>
+      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E5%A4%9A%E6%B7%B1%E5%BA%A6%E9%9B%86%E6%88%90/">多深度集成</a></li>
+      <li><a href="https://zhaoylee.github.io/Blogs/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/">无监督</a></li>
     </ul>
   </footer>
 </article>
