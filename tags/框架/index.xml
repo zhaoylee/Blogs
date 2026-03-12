@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>框架： on zhaoyli&#39;s Blog</title>
+    <link>https://zhaoylee.github.io/Blogs/tags/%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 框架： on zhaoyli&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>[©2024 zhaoyli&amp;rsquo;s Blog] https://zhaoylee.github.io/)</copyright>
+    <lastBuildDate>Thu, 12 Mar 2026 10:25:13 +0800</lastBuildDate>
+    <atom:link href="https://zhaoylee.github.io/Blogs/tags/%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Fiveth Post</title>
+      <link>https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/</link>
+      <pubDate>Thu, 12 Mar 2026 10:25:13 +0800</pubDate>
+      <guid>https://zhaoylee.github.io/Blogs/posts/my-fiveth-post/</guid>
+      <description>&lt;h2 id=&#34;0-一句话总结-tldr&#34;&gt;0. 一句话总结 (TL;DR)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(这篇论文用什么方法，解决了什么问题，达到了什么效果)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-动机与问题-motivation&#34;&gt;1. 动机与问题 (Motivation)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(现有的单目3D检测有什么痛点？)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-核心方法-method&#34;&gt;2. 核心方法 (Method)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(具体怎么做的？比如额外辅助模型是怎么引入的？数据增强的具体流程是什么？)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
