@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>[©2024 zhaoyli&amp;rsquo;s Blog] https://zhaoylee.github.io/)</copyright>
-    <lastBuildDate>Thu, 12 Mar 2026 09:42:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 11:08:41 +0000</lastBuildDate>
     <atom:link href="https://zhaoylee.github.io/Blogs/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>概率采样</title>
+      <link>https://zhaoylee.github.io/Blogs/tags/%E6%A6%82%E7%8E%87%E9%87%87%E6%A0%B7/</link>
+      <pubDate>Fri, 13 Mar 2026 15:27:43 +0800</pubDate>
+      <guid>https://zhaoylee.github.io/Blogs/tags/%E6%A6%82%E7%8E%87%E9%87%87%E6%A0%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>深度采样</title>
+      <link>https://zhaoylee.github.io/Blogs/tags/%E6%B7%B1%E5%BA%A6%E9%87%87%E6%A0%B7/</link>
+      <pubDate>Fri, 13 Mar 2026 15:27:43 +0800</pubDate>
+      <guid>https://zhaoylee.github.io/Blogs/tags/%E6%B7%B1%E5%BA%A6%E9%87%87%E6%A0%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>一对多</title>
+      <link>https://zhaoylee.github.io/Blogs/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A/</link>
+      <pubDate>Fri, 13 Mar 2026 15:27:43 +0800</pubDate>
+      <guid>https://zhaoylee.github.io/Blogs/tags/%E4%B8%80%E5%AF%B9%E5%A4%9A/</guid>
+      <description></description>
+    </item>
     <item>
       <title>车载、路边、无人机</title>
       <link>https://zhaoylee.github.io/Blogs/tags/%E8%BD%A6%E8%BD%BD%E8%B7%AF%E8%BE%B9%E6%97%A0%E4%BA%BA%E6%9C%BA/</link>
@@ -35,20 +56,6 @@
       <link>https://zhaoylee.github.io/Blogs/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/</link>
       <pubDate>Thu, 12 Mar 2026 10:25:13 +0800</pubDate>
       <guid>https://zhaoylee.github.io/Blogs/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>博客</title>
-      <link>https://zhaoylee.github.io/Blogs/tags/%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://zhaoylee.github.io/Blogs/tags/%E5%8D%9A%E5%AE%A2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>测试</title>
-      <link>https://zhaoylee.github.io/Blogs/tags/%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://zhaoylee.github.io/Blogs/tags/%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>zhaoyli&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content=" - zhaoyli&#39;s Blog">
+<meta name="author" content="">
+<link rel="canonical" href="https://zhaoylee.github.io/Blogs/posts/transformer-based/">
+<link crossorigin="anonymous" href="/Blogs/assets/css/stylesheet.42e47b53807f8ae26c8c66463d90a62b9df297c5745fb962654b1fb0396e6f0c.css" integrity="sha256-QuR7U4B/iuJsjGZGPZCmK53yl8V0X7liZUsfsDlubww=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://zhaoylee.github.io/Blogs/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zhaoylee.github.io/Blogs/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zhaoylee.github.io/Blogs/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zhaoylee.github.io/Blogs/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zhaoylee.github.io/Blogs/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://zhaoylee.github.io/Blogs/posts/transformer-based/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="https://zhaoylee.github.io/Blogs/posts/transformer-based/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style><meta property="og:url" content="https://zhaoylee.github.io/Blogs/posts/transformer-based/">
+  <meta property="og:site_name" content="zhaoyli&#39;s Blog">
+  <meta property="og:title" content="zhaoyli&#39;s Blog">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="zhaoyli&#39;s Blog">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://zhaoylee.github.io/Blogs/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://zhaoylee.github.io/Blogs/posts/transformer-based/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://zhaoylee.github.io/Blogs/" accesskey="h" title="zhaoyli&#39;s Blog (Alt + H)">zhaoyli&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://zhaoylee.github.io/Blogs/" title="zhaoyli&#39;s Blog">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zhaoylee.github.io/Blogs/categories/" title="Categories">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zhaoylee.github.io/Blogs/tags/" title="Tags">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zhaoylee.github.io/Blogs/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zhaoylee.github.io/Blogs/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://zhaoylee.github.io/Blogs/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry">
+    <div class="entry-content-wrapper">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models
+            </h2>
+        </header>
+        <div class="entry-content">
+            <p> 🏛️ 会议/期刊：ICRA
+📅 发表年份：2025
+💻 开源代码：GitHub 链接
+📄 论文题目：MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models
+0. 一句话总结 (TL;DR) (这篇论文用什么方法，解决了什么问题，达到了什么效果) MonoCT 提出了一种基于一致性教师模型（Consistent Teacher）的半监督自适应框架，通过在目标域（Target Domain）引入伪标签一致性约束，有效解决了单目 3D 检测在不同数据集间迁移时的深度估计偏差问题。
+...</p>
+        </div>
+        <footer class="entry-footer"><div class="custom-post-meta" style="font-size: 0.9em; color: var(--secondary);"><span style='color: #e9546b; font-weight: bold;'>📌 置顶</span> &nbsp;|&nbsp; 📅 发表于 2026-03-12 &nbsp;|&nbsp; 🕒 更新于 2026-03-13 &nbsp;|&nbsp; 📁 <a href="/Blogs/categories/%E5%A4%9A%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84mono3d/">多视角下的Mono3D</a> &nbsp;|&nbsp; 🏷️ <a href="/Blogs/tags/%E8%BD%A6%E8%BD%BD%E8%B7%AF%E8%BE%B9%E6%97%A0%E4%BA%BA%E6%9C%BA/">车载、路边、无人机</a>, <a href="/Blogs/tags/%E9%A2%9D%E5%A4%96%E7%9A%84%E6%A8%A1%E5%9E%8B/">额外的模型</a>, <a href="/Blogs/tags/%E5%A4%9A%E6%B7%B1%E5%BA%A6%E9%9B%86%E6%88%90/">多深度集成</a>, <a href="/Blogs/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/">无监督</a></div></footer>
+    </div>
+    <div class="entry-cover-wrapper"> 
+<figure class="entry-cover">
+            <img loading="lazy"
+                srcset='https://zhaoylee.github.io/Blogs/posts/transformer-based/monoct-overcoming-monocular-3d-detection-domain-shift-with-consistent-teacher-models/cover_hu_1d984b6ef62de110.jpg 360w,https://zhaoylee.github.io/Blogs/posts/transformer-based/monoct-overcoming-monocular-3d-detection-domain-shift-with-consistent-teacher-models/cover_hu_d91211fc865d5717.jpg 480w,https://zhaoylee.github.io/Blogs/posts/transformer-based/monoct-overcoming-monocular-3d-detection-domain-shift-with-consistent-teacher-models/cover.jpg 543w'
+                src="https://zhaoylee.github.io/Blogs/posts/transformer-based/monoct-overcoming-monocular-3d-detection-domain-shift-with-consistent-teacher-models/cover.jpg"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="543" height="543"
+                alt="">
+</figure>
+    </div>
+    <a class="entry-link" aria-label="post link to MonoCT: Overcoming Monocular 3D Detection Domain Shift with Consistent Teacher Models" href="https://zhaoylee.github.io/Blogs/posts/transformer-based/monoct-overcoming-monocular-3d-detection-domain-shift-with-consistent-teacher-models/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>[©2024 zhaoyli&rsquo;s Blog] <a href="https://zhaoylee.github.io/">https://zhaoylee.github.io/</a>)</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -7,20 +7,20 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>[©2024 zhaoyli&amp;rsquo;s Blog] https://zhaoylee.github.io/)</copyright>
-    <lastBuildDate>Thu, 12 Mar 2026 09:42:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 11:08:41 +0000</lastBuildDate>
     <atom:link href="https://zhaoylee.github.io/Blogs/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>后处理</title>
+      <link>https://zhaoylee.github.io/Blogs/categories/%E5%90%8E%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 13 Mar 2026 15:27:43 +0800</pubDate>
+      <guid>https://zhaoylee.github.io/Blogs/categories/%E5%90%8E%E5%A4%84%E7%90%86/</guid>
+      <description></description>
+    </item>
     <item>
       <title>多视角下的Mono3D</title>
       <link>https://zhaoylee.github.io/Blogs/categories/%E5%A4%9A%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84mono3d/</link>
       <pubDate>Thu, 12 Mar 2026 10:25:13 +0800</pubDate>
       <guid>https://zhaoylee.github.io/Blogs/categories/%E5%A4%9A%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84mono3d/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>测试博客操作</title>
-      <link>https://zhaoylee.github.io/Blogs/categories/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://zhaoylee.github.io/Blogs/categories/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</guid>
       <description></description>
     </item>
   </channel>
